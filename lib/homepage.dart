@@ -88,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           Positioned(
                             top: 140,
                             left: 130,
-                            child: Text('Neki Ki Deewar1',
+                            child: Text('Neki Ki Deewar',
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold,
