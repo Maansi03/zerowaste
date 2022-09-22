@@ -50,7 +50,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         bottomLeft: Radius.circular(36),
                         bottomRight: Radius.circular(36))),
                 child: Image.asset(
-                  'assets/Document.png',
+                  'assets/h11.jpg',
+                  fit: BoxFit.cover,
+                  width: double.infinity,
                 ),
               ),
             ]),

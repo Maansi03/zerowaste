@@ -53,81 +53,178 @@ class _AboutNekiDiwarState extends State<AboutNekiDiwar> {
         ),
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            CarouselSlider(
-              options: CarouselOptions(
-                  autoPlay: true,
-                  enlargeCenterPage: true,
-                  viewportFraction: 0.9,
-                  aspectRatio: 2.0,
-                  initialPage: 2,
-                  scrollDirection: Axis.vertical
-
-                  // autoPlay: true,
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(colors: [
+              Colors.green.withOpacity(.6),
+              Colors.white.withOpacity(.6),
+            ]),
+          ),
+          child: Column(
+            children: <Widget>[
+              //height: MediaQuery.of(context).size.height * 0.3,
+              //width: double.infinity,
+              Card(
+                elevation: 20,
+                child: CarouselSlider(
+                  options: CarouselOptions(
+                    autoPlay: true,
+                    height: 200,
+                    viewportFraction: 1,
+                    aspectRatio: 16 / 2,
+                    enableInfiniteScroll: true,
                   ),
-              items: imagesList
-                  .map(
-                    (item) => Center(
+                  items: imagesList
+                      .map(
+                        (item) => Center(
+                          child: Container(
+                            width: double.infinity,
+                            margin: const EdgeInsets.all(2),
+                            color: Colors.orange,
+                            // decoration:
+                            //     BoxDecoration(borderRadius: BorderRadius.circular(100)),
+                            child: Image.asset(
+                              item,
+                              fit: BoxFit.cover,
+                              width: double.infinity,
+                              height: double.infinity,
+                            ),
+                          ),
+                        ),
+                      )
+                      .toList(),
+                ),
+              ),
+
+              SizedBox(
+                height: 15,
+              ),
+              Container(
+                child: Text(
+                  'Neki Ki Deewar',
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.green,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+              SizedBox(
+                height: 3,
+              ),
+              Container(
+                padding: EdgeInsets.all(10),
+                child: ReadMoreText(
+                  'ईदिशा और जिला प्रशासन कुरुक्षेत्र द्वारा लगभग पांच वर्षों से गरीब और जरूरतमंद लोगों की भलाई के लिए नेकी की दीवार की शानदार पहल की गई जो आज भी सभी लोगों के सफल प्रयास से चल रही है।ये नेकी की दीवार सरकारी एस डी एम ऑफिस के साथ है।इस नेकी की दीवार के लिए आप सब अपने अपने घरों से जो चीजें बेकार समझ कर फेंक देते हो या उन्हें बेच देते हो।आप सब ऐसा करने के बजाय उन सब चीजों को जैसे कपड़ा (लेडीज या जेन्ट्स),जूते,चप्पल,बच्चों के खिलौने दान स्वरूप इस नेकी की दीवार पर किसी भी समय लगा सकते हैं और पुण्य के भागी बन सकते हैं।',
+                  trimLines: 2,
+                  style: TextStyle(fontSize: 17),
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Card(
+                elevation: 5,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                margin: EdgeInsets.all(20),
+                child: GridView.count(
+                  shrinkWrap: true,
+                  crossAxisCount: 3,
+                  childAspectRatio: 2,
+                  mainAxisSpacing: 1,
+                  crossAxisSpacing: 1,
+                  children: [
+                    Card(
+                      elevation: 5,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
                       child: Image.asset(
-                        item,
-                        // fit: BoxFit.cover,
+                        'ND1.jpeg',
+                        fit: BoxFit.cover,
                       ),
                     ),
-                  )
-                  .toList(),
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            Container(
-              child: Text(
-                'Neki Ki Deewar',
-                style: TextStyle(
-                    fontSize: 40,
-                    color: Colors.green,
-                    fontWeight: FontWeight.bold),
+                    Card(
+                      elevation: 5,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Image.asset(
+                        'ND2.jpeg',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Card(
+                      elevation: 5,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Image.asset(
+                        'ND3.jpeg',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Card(
+                      elevation: 5,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Image.asset(
+                        'ND4.jpeg',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Card(
+                      elevation: 5,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Image.asset(
+                        'nekikideewar3.jpeg',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Card(
+                      elevation: 5,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Image.asset(
+                        'nekiDiwar.jpeg',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Container(
-              padding: EdgeInsets.all(20),
-              child: ReadMoreText(
-                'ईदिशा और जिला प्रशासन कुरुक्षेत्र द्वारा लगभग पांच वर्षों से गरीब और जरूरतमंद लोगों की भलाई के लिए नेकी की दीवार की शानदार पहल की गई जो आज भी सभी लोगों के सफल प्रयास से चल रही है।ये नेकी की दीवार सरकारी एस डी एम ऑफिस के साथ है।इस नेकी की दीवार के लिए आप सब अपने अपने घरों से जो चीजें बेकार समझ कर फेंक देते हो या उन्हें बेच देते हो।आप सब ऐसा करने के बजाय उन सब चीजों को जैसे कपड़ा (लेडीज या जेन्ट्स),जूते,चप्पल,बच्चों के खिलौने दान स्वरूप इस नेकी की दीवार पर किसी भी समय लगा सकते हैं और पुण्य के भागी बन सकते हैं।',
-                trimLines: 2,
-                style: TextStyle(fontSize: 25),
+              SizedBox(
+                height: 35,
               ),
-            ),
-            ElevatedButton(
+              ElevatedButton(
                 onPressed: launchURL,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.red, // Background color
+                  backgroundColor: Colors.green, // Background color
                 ),
-                child: Row(
-                  children: const [
-                    Text('Video'),
-                  ],
-                )),
-            ElevatedButton(
-              child: Text('Want to donate ?'),
-              style: ElevatedButton.styleFrom(
-                primary: Colors.green,
-                // side: BorderSide(color: Colors.yellow, width: 5),
-                textStyle: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 25,
-                    fontStyle: FontStyle.normal),
-                shape: BeveledRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10))),
+                child: Text('Youtube Video'),
               ),
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => NekiDiwar()));
-              },
-            ),
-          ],
+              SizedBox(
+                height: 15,
+              ),
+              ElevatedButton(
+                child: Text('Want to donate ?'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.green, // Background color
+                ),
+                //style: ButtonStyle(
+
+                // shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                //     RoundedRectangleBorder(
+                //         borderRadius: BorderRadius.circular(18.0),
+                //         side: BorderSide(color: Colors.green)))),
+                //   shape:  MaterialStateProperty.all<RoundedRectangleBorder>(
+                //       borderRadius: BorderRadius.circular(Radius.circular(10))),
+                // ),
+                onPressed: () {
+                  // Navigator.push(context,
+                  //     MaterialPageRoute(builder: (context) => NekiDiwar()));
+                },
+              ),
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
