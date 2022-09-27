@@ -1,13 +1,8 @@
-// ignore: file_names
 import 'package:flutter/material.dart';
 import 'homepage.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-// ignore: use_key_in_widget_constructors
-
 class NekiDiwar extends StatefulWidget {
-  // NekiDiwar({super.key});
-
   @override
   State<NekiDiwar> createState() => _NekiDiwarState();
 }
@@ -73,56 +68,32 @@ class _NekiDiwarState extends State<NekiDiwar> {
             child: Column(
               children: [
                 SizedBox(
-                  height: 50,
+                  height: 10,
+                ),
+                Text(
+                    'There could be no definition to a successful life that does not include the the service to others. Invest yourself in the life of someone else today!!',
+                    style: TextStyle(fontSize: 15)),
+                // SizedBox(
+                //   height: 10,
+                // ),
+                Text(
+                    'You can visit our place to donate or we provide the pick up services as well.Please select the type of donation in the field given below.',
+                    style: TextStyle(fontSize: 15)),
+                SizedBox(
+                  height: 30,
                 ),
                 Center(
                   child: Text(
                     'Select Donation Type :',
-                    style: TextStyle(fontSize: 30),
+                    style: TextStyle(fontSize: 20),
                   ),
                 ),
-
-                // Row(
-                //   children: <Widget>[
-                //     Expanded(
-                //       flex: 1,
-                //       child: Container(
-                //         padding: EdgeInsets.only(left: 30),
-                //         child: RadioListTile(
-                //           value: 0,
-                //           groupValue: _groupValue,
-                //           title: const Text("Visit Us",
-                //               style: TextStyle(fontSize: 20)),
-                //           onChanged: (newValue) => setState(
-                //             () => _groupValue = newValue!,
-                //           ),
-                //           activeColor: Colors.red,
-                //           selected: false,
-                //         ),
-                //       ),
-                //     ),
-                //     Expanded(
-                //       flex: 1,
-                //       child: RadioListTile(
-                //         value: 1,
-                //         groupValue: _groupValue,
-                //         title: const Text("Pickup",
-                //             style: TextStyle(fontSize: 20)),
-                //         onChanged: (newValue) => setState(
-                //           () => _groupValue = newValue!,
-                //         ),
-                //         activeColor: Colors.red,
-                //         selected: false,
-                //       ),
-                //     ),
-                //   ],
-                // ),
                 SizedBox(
-                  height: 75,
+                  height: 40,
                 ),
                 Container(
                   height: 60,
-                  width: 100,
+                  width: 170,
                   child: ElevatedButton(
                       onPressed: launchMap,
                       style: ElevatedButton.styleFrom(
@@ -140,7 +111,7 @@ class _NekiDiwarState extends State<NekiDiwar> {
                 ),
                 Container(
                   height: 60,
-                  width: 100,
+                  width: 170,
                   child: ElevatedButton(
                       onPressed: launchForm,
                       style: ElevatedButton.styleFrom(
@@ -291,6 +262,7 @@ class _NekiDiwarState extends State<NekiDiwar> {
                 //     ),
                 //   ),
                 // ),
+                SizedBox(height: 300),
               ],
             ),
           ),

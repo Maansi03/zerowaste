@@ -16,14 +16,15 @@ class _AboutNekiDiwarState extends State<AboutNekiDiwar> {
     launch('https://www.youtube.com/watch?v=GoMt8eJ98kE');
   }
 
+  launchGallery() {
+    // ignore: deprecated_member_use
+    launch('https://kurukshetra.gov.in/gallery/neki-ki-deewar/');
+  }
+
   final List<String> imagesList = [
     'assets/nekidiwar.jpeg',
     'assets/nekikideewar3.jpeg',
     'assets/nekikideewar2.jpeg',
-    // 'https://thumbs.dreamstime.com/b/landscape-grass-field-green-environment-public-park-use-as-natural-background-backdrop-78426893.jpg',
-    // 'https://image.shutterstock.com/image-illustration/green-screen-looping-animated-background-260nw-1702327750.jpg',
-
-    // 'https://drive.google.com/uc?export=view&id=1WkSGq2ZmWDmS9U-SaxrwV5-nys3gfEeT',
   ];
   @override
   Widget build(BuildContext context) {
@@ -99,12 +100,13 @@ class _AboutNekiDiwarState extends State<AboutNekiDiwar> {
               SizedBox(
                 height: 15,
               ),
-              Container(
+              Align(
+                alignment: Alignment.topLeft,
                 child: Text(
                   'Neki Ki Deewar',
                   style: TextStyle(
                       fontSize: 20,
-                      color: Colors.green,
+                      color: Colors.black,
                       fontWeight: FontWeight.bold),
                 ),
               ),
@@ -114,7 +116,7 @@ class _AboutNekiDiwarState extends State<AboutNekiDiwar> {
               Container(
                 padding: EdgeInsets.all(10),
                 child: ReadMoreText(
-                  'ईदिशा और जिला प्रशासन कुरुक्षेत्र द्वारा लगभग पांच वर्षों से गरीब और जरूरतमंद लोगों की भलाई के लिए नेकी की दीवार की शानदार पहल की गई जो आज भी सभी लोगों के सफल प्रयास से चल रही है।ये नेकी की दीवार सरकारी एस डी एम ऑफिस के साथ है।इस नेकी की दीवार के लिए आप सब अपने अपने घरों से जो चीजें बेकार समझ कर फेंक देते हो या उन्हें बेच देते हो।आप सब ऐसा करने के बजाय उन सब चीजों को जैसे कपड़ा (लेडीज या जेन्ट्स),जूते,चप्पल,बच्चों के खिलौने दान स्वरूप इस नेकी की दीवार पर किसी भी समय लगा सकते हैं और पुण्य के भागी बन सकते हैं।',
+                  'Neki Ki Deewar (Wall Of Goodness) For the betterment of the poor and needy people for almost last five years by E-disha and District Administration Kurukshetra, a great initiative of the wall of goodness was taken which is going on even today with the successful efforts of all the people. This wall of goodness is near the government SDM office. Many of you throw away or sell the things which you consider useless. Clothes (ladies or gents), shoes, slippers, childrens toyscan be put on the wall of this goodness at any time as a donation and you can become a partaker of virtue. ',
                   trimLines: 2,
                   style: TextStyle(fontSize: 17),
                 ),
@@ -122,106 +124,118 @@ class _AboutNekiDiwarState extends State<AboutNekiDiwar> {
               SizedBox(
                 height: 15,
               ),
-              Card(
-                elevation: 5,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
-                margin: EdgeInsets.all(20),
-                child: GridView.count(
-                  shrinkWrap: true,
-                  crossAxisCount: 3,
-                  childAspectRatio: 2,
-                  mainAxisSpacing: 1,
-                  crossAxisSpacing: 1,
-                  children: [
-                    Card(
-                      elevation: 5,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Image.asset(
-                        'ND1.jpeg',
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Card(
-                      elevation: 5,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Image.asset(
-                        'ND2.jpeg',
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Card(
-                      elevation: 5,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Image.asset(
-                        'ND3.jpeg',
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Card(
-                      elevation: 5,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20)),
-                      child: Image.asset(
-                        'ND4.jpeg',
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Card(
-                      elevation: 5,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Image.asset(
-                        'nekikideewar3.jpeg',
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Card(
-                      elevation: 5,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Image.asset(
-                        'nekiDiwar.jpeg',
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
+              // Card(
+              //   elevation: 5,
+              //   shape: RoundedRectangleBorder(
+              //       borderRadius: BorderRadius.circular(10)),
+              //   margin: EdgeInsets.all(20),
+              //   child: GridView.count(
+              //     shrinkWrap: true,
+              //     crossAxisCount: 3,
+              //     childAspectRatio: 2,
+              //     mainAxisSpacing: 1,
+              //     crossAxisSpacing: 1,
+              //     children: [
+              //       Card(
+              //         elevation: 5,
+              //         shape: RoundedRectangleBorder(
+              //             borderRadius: BorderRadius.circular(10)),
+              //         child: Image.asset(
+              //           'ND1.jpeg',
+              //           fit: BoxFit.cover,
+              //         ),
+              //       ),
+              //       Card(
+              //         elevation: 5,
+              //         shape: RoundedRectangleBorder(
+              //             borderRadius: BorderRadius.circular(10)),
+              //         child: Image.asset(
+              //           'ND2.jpeg',
+              //           fit: BoxFit.cover,
+              //         ),
+              //       ),
+              //       Card(
+              //         elevation: 5,
+              //         shape: RoundedRectangleBorder(
+              //             borderRadius: BorderRadius.circular(10)),
+              //         child: Image.asset(
+              //           'ND3.jpeg',
+              //           fit: BoxFit.cover,
+              //         ),
+              //       ),
+              //       Card(
+              //         elevation: 5,
+              //         shape: RoundedRectangleBorder(
+              //             borderRadius: BorderRadius.circular(20)),
+              //         child: Image.asset(
+              //           'ND4.jpeg',
+              //           fit: BoxFit.cover,
+              //         ),
+              //       ),
+              //       Card(
+              //         elevation: 5,
+              //         shape: RoundedRectangleBorder(
+              //             borderRadius: BorderRadius.circular(10)),
+              //         child: Image.asset(
+              //           'nekikideewar3.jpeg',
+              //           fit: BoxFit.cover,
+              //         ),
+              //       ),
+              //       Card(
+              //         elevation: 5,
+              //         shape: RoundedRectangleBorder(
+              //             borderRadius: BorderRadius.circular(10)),
+              //         child: Image.asset(
+              //           'nekidiwar.jpeg',
+              //           fit: BoxFit.cover,
+              //         ),
+              //       ),
+              //     ],
+              //   ),
+              // ),
+
+              const SizedBox(
                 height: 35,
               ),
-              ElevatedButton(
-                onPressed: launchURL,
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green, // Background color
-                ),
-                child: Text('Youtube Video'),
+              Row(
+                children: [
+                  SizedBox(
+                    width: 25,
+                  ),
+                  ElevatedButton(
+                    onPressed: launchURL,
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.green, // Background color
+                    ),
+                    child: Text('Youtube Video'),
+                  ),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  ElevatedButton(
+                    onPressed: launchGallery,
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.green, // Background color
+                    ),
+                    child: Text('Media Gallery'),
+                  ),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  ElevatedButton(
+                    child: Text('Want To Donate  ?'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.green, // Background color
+                    ),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => NekiDiwar()));
+                    },
+                  ),
+                ],
               ),
               SizedBox(
-                height: 15,
-              ),
-              ElevatedButton(
-                child: Text('Want to donate ?'),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green, // Background color
-                ),
-                //style: ButtonStyle(
-
-                // shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                //     RoundedRectangleBorder(
-                //         borderRadius: BorderRadius.circular(18.0),
-                //         side: BorderSide(color: Colors.green)))),
-                //   shape:  MaterialStateProperty.all<RoundedRectangleBorder>(
-                //       borderRadius: BorderRadius.circular(Radius.circular(10))),
-                // ),
-                onPressed: () {
-                  // Navigator.push(context,
-                  //     MaterialPageRoute(builder: (context) => NekiDiwar()));
-                },
+                height: 300,
               ),
             ],
           ),

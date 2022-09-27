@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_zerowaste/aboutNekiDiwar.dart';
+import 'package:flutter_zerowaste/club.dart';
 
 import 'menu.dart';
 
@@ -50,9 +51,10 @@ class _MyHomePageState extends State<MyHomePage> {
                         bottomLeft: Radius.circular(36),
                         bottomRight: Radius.circular(36))),
                 child: Image.asset(
-                  'assets/Document.png',
-                  fit: BoxFit.cover,
-                  width: double.infinity,
+                  'assets/home1.jpeg',
+                  // height: 300,
+                  // fit: BoxFit.cover,
+                  // width: double.infinity,
                 ),
               ),
             ]),
@@ -104,17 +106,54 @@ class _MyHomePageState extends State<MyHomePage> {
 
                 //------------
               ],
+            ),
+            ListView(
+              physics: const NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              children: [
+                InkWell(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Club()));
+                  },
+                  child: Card(
+                    elevation: 20,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(42),
+                          border: Border.all(
+                            color: Colors.black,
+                            width: 3,
+                          )),
+                      child: Stack(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(40),
+                            child: Image.asset(
+                              'assets/Clubmain.jpeg',
+                            ),
+                          ),
+                          // Positioned(
+                          //   top: 140,
+                          //   left: 130,
+                          //   child: Text('Club',
+                          //       style: TextStyle(
+                          //           color: Colors.black,
+                          //           fontWeight: FontWeight.bold,
+                          //           fontSize: 24)),
+                          // ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+
+                //------------
+              ],
             )
           ],
         ),
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {
-      //     Navigator.push(
-      //         context, MaterialPageRoute(builder: ((context) => MyApp())));
-      //   },
-      //   child: const Icon(Icons.home),
-      // ),
     );
   }
 }
