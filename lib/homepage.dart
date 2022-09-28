@@ -86,18 +86,18 @@ class _MyHomePageState extends State<MyHomePage> {
                           ClipRRect(
                             borderRadius: BorderRadius.circular(40),
                             child: Image.asset(
-                              'assets/nekidiwar.jpeg',
+                              'assets/ND.jpeg',
                             ),
                           ),
-                          Positioned(
-                            top: 140,
-                            left: 130,
-                            child: Text('Neki Ki Deewar',
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 24)),
-                          ),
+                          // Positioned(
+                          //   top: 140,
+                          //   left: 130,
+                          //   // child: Text('Neki Ki Deewar',
+                          //   //     style: TextStyle(
+                          //   //         color: Colors.black,
+                          //   //         fontWeight: FontWeight.bold,
+                          //   //         fontSize: 24)),
+                          // ),
                         ],
                       ),
                     ),

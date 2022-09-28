@@ -86,9 +86,10 @@ class _ClubState extends State<Club> {
                   child: Text(
                     'Club',
                     style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
+                      fontSize: 20,
+                      color: Colors.black,
+                      // fontWeight: FontWeight.bold
+                    ),
                   ),
                 ),
                 Padding(
@@ -97,12 +98,13 @@ class _ClubState extends State<Club> {
                     margin: const EdgeInsets.all(5),
                     alignment: Alignment.center,
                     child: const ReadMoreText(
-                      'Zero Waste\n\n The conservation of all resources by means of responsible production, consumption, reuse and recovery of all products, packaging, and materials, without burning them and without discharges to land, water or air that threaten the environment or human health.you can replace your plastic water bottles with reusable ones. Get rid of your paper towels and replace them with reusable cloths. Ditch single-use items and go for options you can reuse. Take a tote bag to the mall instead of using the plastic one. Compost all kitchen food scraps and so on. Are there any local stores or restaurants that majorly use plastic utensils and plastic bags? You can reach out to these companies and politely address their plastic use.\n Plastic waste contributes massively to greenhouse gases. It could also creep into our waterways and lands, poisoning sea animals and affecting human health. You can draft a letter and send them to local companies explaining the dangers of plastic use. Another way to spread awareness and get people involved is to organize zero waste meetups in your locality.\n Start by creating some buzz around the zero-waste program. You can use social media platforms like Facebook groups to build an online community of people interested in zero wasteZero waste can help create jobs and boost the Economy. ',
-                      trimLines: 2,
+                      'The conservation of all resources by means of responsible production, consumption, reuse and recovery of all products, packaging, and materials, without burning them and without discharges to land, water or air that threaten the environment or human health.you can replace your plastic water bottles with reusable ones. Get rid of your paper towels and replace them with reusable cloths. Ditch single-use items and go for options you can reuse. Take a tote bag to the mall instead of using the plastic one. Compost all kitchen food scraps and so on. Are there any local stores or restaurants that majorly use plastic utensils and plastic bags? You can reach out to these companies and politely address their plastic use.\n Plastic waste contributes massively to greenhouse gases. It could also creep into our waterways and lands, poisoning sea animals and affecting human health. You can draft a letter and send them to local companies explaining the dangers of plastic use. Another way to spread awareness and get people involved is to organize zero waste meetups in your locality.\n Start by creating some buzz around the zero-waste program. You can use social media platforms like Facebook groups to build an online community of people interested in zero wasteZero waste can help create jobs and boost the Economy. ',
+                      trimLines: 4,
                       style: TextStyle(
-                          fontSize: 18.0,
-                          color: Colors.brown,
-                          fontWeight: FontWeight.bold),
+                        fontSize: 17.0,
+                        color: Colors.black,
+                        // fontWeight: FontWeight.bold
+                      ),
                     ),
                   ),
                 ),

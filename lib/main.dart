@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_zerowaste/test.dart';
+import 'package:flutter_zerowaste/web.dart';
 import 'homepage.dart';
 
 void main() => runApp(MaterialApp(
@@ -12,6 +12,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: test());
+    return Scaffold(body: MyHomePage());
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_zerowaste/aboutus.dart';
-import 'package:flutter_zerowaste/news.dart';
 import 'package:flutter_zerowaste/statistics.dart';
+import 'package:flutter_zerowaste/news.dart';
 import 'contactUs.dart';
 
 class MyDrawer extends StatefulWidget {
@@ -62,7 +62,7 @@ class _MyDrawerState extends State<MyDrawer> {
           InkWell(
             onTap: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => News()));
+                  context, MaterialPageRoute(builder: (context) => news()));
             },
             child: ListTile(
               title: Text(
