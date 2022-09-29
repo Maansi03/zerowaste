@@ -7,14 +7,15 @@ class ContactUs extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.white,
+        iconTheme: IconThemeData(color: Colors.green),
         title: Container(
           child: Center(
             child: Text(
-              "Zero Waste",
+              "Contact Us",
               style: TextStyle(
                   fontSize: 20.0,
-                  color: Colors.red,
+                  color: Colors.black,
                   fontWeight: FontWeight.bold),
             ),
           ),
@@ -32,7 +33,7 @@ class ContactUs extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(colors: [
-              Colors.green.withOpacity(.6),
+              Color.fromARGB(255, 114, 213, 117).withOpacity(.1),
               Colors.white.withOpacity(.6),
             ]),
           ),

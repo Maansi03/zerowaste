@@ -30,16 +30,17 @@ class _AboutNekiDiwarState extends State<AboutNekiDiwar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        iconTheme: IconThemeData(color: Colors.green),
+        backgroundColor: Colors.white,
         title: Container(
           //padding: EdgeInsets.only(top: statusbarHeight),
 
           child: Center(
             child: Text(
-              "Zero Waste",
+              "Neki Ki Deewar",
               style: TextStyle(
                   fontSize: 20.0,
-                  color: Colors.red,
+                  color: Colors.black,
                   fontWeight: FontWeight.bold),
             ),
           ),
@@ -57,7 +58,7 @@ class _AboutNekiDiwarState extends State<AboutNekiDiwar> {
         child: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(colors: [
-              Colors.green.withOpacity(.6),
+              Color.fromARGB(255, 114, 213, 117).withOpacity(.1),
               Colors.white.withOpacity(.6),
             ]),
           ),
@@ -65,25 +66,23 @@ class _AboutNekiDiwarState extends State<AboutNekiDiwar> {
             children: <Widget>[
               //height: MediaQuery.of(context).size.height * 0.3,
               //width: double.infinity,
-              Card(
-                elevation: 20,
-                child: CarouselSlider(
-                  options: CarouselOptions(
-                    autoPlay: true,
-                    height: 200,
-                    viewportFraction: 1,
-                    aspectRatio: 16 / 2,
-                    enableInfiniteScroll: true,
-                  ),
-                  items: imagesList
-                      .map(
-                        (item) => Center(
+              CarouselSlider(
+                options: CarouselOptions(
+                  autoPlay: true,
+                  height: 200,
+                  viewportFraction: 1,
+                  aspectRatio: 16 / 2,
+                  enableInfiniteScroll: true,
+                ),
+                items: imagesList
+                    .map(
+                      (item) => Center(
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(25),
                           child: Container(
                             width: double.infinity,
                             margin: const EdgeInsets.all(2),
                             color: Colors.orange,
-                            // decoration:
-                            //     BoxDecoration(borderRadius: BorderRadius.circular(100)),
                             child: Image.asset(
                               item,
                               fit: BoxFit.cover,
@@ -92,22 +91,25 @@ class _AboutNekiDiwarState extends State<AboutNekiDiwar> {
                             ),
                           ),
                         ),
-                      )
-                      .toList(),
-                ),
+                      ),
+                    )
+                    .toList(),
               ),
 
               SizedBox(
                 height: 15,
               ),
-              Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  'Neki Ki Deewar',
-                  style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold),
+              Container(
+                padding: EdgeInsets.all(10),
+                child: Align(
+                  alignment: Alignment.topLeft,
+                  child: Text(
+                    'Neki Ki Deewar',
+                    style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
               SizedBox(
@@ -131,7 +133,7 @@ class _AboutNekiDiwarState extends State<AboutNekiDiwar> {
               Row(
                 children: [
                   SizedBox(
-                    width: 25,
+                    width: 4,
                   ),
                   ElevatedButton(
                     onPressed: launchURL,
@@ -141,7 +143,7 @@ class _AboutNekiDiwarState extends State<AboutNekiDiwar> {
                     child: Text('Youtube Video'),
                   ),
                   SizedBox(
-                    width: 15,
+                    width: 4,
                   ),
                   ElevatedButton(
                     onPressed: launchGallery,
@@ -151,7 +153,7 @@ class _AboutNekiDiwarState extends State<AboutNekiDiwar> {
                     child: Text('Media Gallery'),
                   ),
                   SizedBox(
-                    width: 15,
+                    width: 4,
                   ),
                   ElevatedButton(
                     child: Text('Want To Donate  ?'),

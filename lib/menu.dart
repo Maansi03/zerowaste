@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_zerowaste/Events.dart';
+import 'package:flutter_zerowaste/Stories.dart';
 import 'package:flutter_zerowaste/aboutus.dart';
 import 'package:flutter_zerowaste/statistics.dart';
 import 'package:flutter_zerowaste/news.dart';
@@ -42,6 +44,10 @@ class _MyDrawerState extends State<MyDrawer> {
               'Events',
               style: TextStyle(fontSize: 16),
             ),
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Events()));
+            },
             leading: Icon(Icons.event),
           ),
           const Divider(
@@ -53,6 +59,10 @@ class _MyDrawerState extends State<MyDrawer> {
               'Stories',
               style: TextStyle(fontSize: 16),
             ),
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Story()));
+            },
             leading: Icon(Icons.auto_stories),
           ),
           const Divider(

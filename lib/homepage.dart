@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_zerowaste/aboutNekiDiwar.dart';
 import 'package:flutter_zerowaste/club.dart';
+import 'package:flutter_zerowaste/6R/sixHome.dart';
 
 import 'menu.dart';
 
@@ -17,7 +18,8 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       drawer: MyDrawer(),
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        iconTheme: IconThemeData(color: Colors.green),
+        backgroundColor: Colors.white,
         title: Container(
           //padding: EdgeInsets.only(top: statusbarHeight),
 
@@ -26,7 +28,7 @@ class _MyHomePageState extends State<MyHomePage> {
               "Zero Waste",
               style: TextStyle(
                   fontSize: 20.0,
-                  color: Colors.red,
+                  color: Colors.black,
                   fontWeight: FontWeight.bold),
             ),
           ),
@@ -44,17 +46,20 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: [
             Stack(children: [
-              Container(
-                decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                        // to make the image curved
-                        bottomLeft: Radius.circular(36),
-                        bottomRight: Radius.circular(36))),
-                child: Image.asset(
-                  'assets/home1.jpeg',
-                  // height: 300,
-                  // fit: BoxFit.cover,
-                  // width: double.infinity,
+              Card(
+                elevation: 15,
+                child: Container(
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                          // to make the image curved
+                          bottomLeft: Radius.circular(56),
+                          bottomRight: Radius.circular(56))),
+                  child: Image.asset(
+                    'assets/home1.jpeg',
+                    // height: 300,
+                    // fit: BoxFit.cover,
+                    // width: double.infinity,
+                  ),
                 ),
               ),
             ]),
@@ -62,6 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 20,
             ),
             ListView(
+              padding: EdgeInsets.all(10),
               physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               children: [
@@ -72,42 +78,37 @@ class _MyHomePageState extends State<MyHomePage> {
                         MaterialPageRoute(
                             builder: (context) => AboutNekiDiwar()));
                   },
-                  child: Card(
-                    elevation: 20,
-                    child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(42),
-                          border: Border.all(
-                            color: Colors.black,
-                            width: 3,
-                          )),
-                      child: Stack(
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(40),
-                            child: Image.asset(
-                              'assets/ND.jpeg',
-                            ),
+                  child: Container(
+                    height: 200,
+                    width: 500,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(42),
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 1,
+                        )),
+                    child: Stack(
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(40),
+                          child: Image.asset(
+                            'assets/ND.jpeg',
+                            height: 200,
+                            width: 500,
+                            fit: BoxFit.cover,
                           ),
-                          // Positioned(
-                          //   top: 140,
-                          //   left: 130,
-                          //   // child: Text('Neki Ki Deewar',
-                          //   //     style: TextStyle(
-                          //   //         color: Colors.black,
-                          //   //         fontWeight: FontWeight.bold,
-                          //   //         fontSize: 24)),
-                          // ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-
-                //------------
               ],
             ),
+            SizedBox(
+              height: 10,
+            ),
             ListView(
+              padding: EdgeInsets.all(10),
               physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               children: [
@@ -116,39 +117,69 @@ class _MyHomePageState extends State<MyHomePage> {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => Club()));
                   },
-                  child: Card(
-                    elevation: 20,
-                    child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(42),
-                          border: Border.all(
-                            color: Colors.black,
-                            width: 3,
-                          )),
-                      child: Stack(
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(40),
-                            child: Image.asset(
-                              'assets/Clubmain.jpeg',
-                            ),
+                  child: Container(
+                    height: 200,
+                    width: 500,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(42),
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 1,
+                        )),
+                    child: Stack(
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(40),
+                          child: Image.asset(
+                            'assets/Clubmain.jpeg',
+                            height: 200,
+                            width: 500,
+                            fit: BoxFit.cover,
                           ),
-                          // Positioned(
-                          //   top: 140,
-                          //   left: 130,
-                          //   child: Text('Club',
-                          //       style: TextStyle(
-                          //           color: Colors.black,
-                          //           fontWeight: FontWeight.bold,
-                          //           fontSize: 24)),
-                          // ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-
-                //------------
+              ],
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            ListView(
+              padding: EdgeInsets.all(10),
+              physics: const NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              children: [
+                InkWell(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => SixRHome()));
+                  },
+                  child: Container(
+                    height: 200,
+                    width: 500,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(42),
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 1,
+                        )),
+                    child: Stack(
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(40),
+                          child: Image.asset(
+                            'assets/6r22.jpg',
+                            height: 200,
+                            width: 500,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ],
             )
           ],

@@ -33,16 +33,17 @@ class _newsState extends State<news> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        iconTheme: IconThemeData(color: Colors.green),
+        backgroundColor: Colors.white,
         title: Container(
           //padding: EdgeInsets.only(top: statusbarHeight),
 
           child: Center(
             child: Text(
-              "Zero Waste",
+              "News Articles",
               style: TextStyle(
                   fontSize: 20.0,
-                  color: Colors.red,
+                  color: Colors.black,
                   fontWeight: FontWeight.bold),
             ),
           ),
@@ -59,7 +60,7 @@ class _newsState extends State<news> {
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(colors: [
-            Colors.green.withOpacity(.6),
+            Color.fromARGB(255, 114, 213, 117).withOpacity(.1),
             Colors.white.withOpacity(.6),
           ]),
         ),
@@ -71,25 +72,31 @@ class _newsState extends State<news> {
             StaggeredGridTile.count(
               crossAxisCellCount: 2,
               mainAxisCellCount: 2,
-              child: Image.asset("News3.jpeg"),
+              child: Image.asset(
+                "News3.jpeg",
+                fit: BoxFit.cover,
+              ),
             ),
             StaggeredGridTile.count(
               crossAxisCellCount: 2,
               mainAxisCellCount: 2,
-              child: Image.asset("News2.jpeg"),
+              child: Image.asset("News2.jpeg", fit: BoxFit.cover),
             ),
             StaggeredGridTile.count(
               crossAxisCellCount: 2,
               mainAxisCellCount: 2,
-              child: Image.asset("News1.jpeg"),
+              child: Image.asset("News1.jpeg", fit: BoxFit.cover),
             ),
             StaggeredGridTile.count(
               crossAxisCellCount: 2,
               mainAxisCellCount: 2,
-              child: Image.asset("News4.jpeg"),
+              child: Image.asset(
+                "News4.jpeg",
+                // fit: BoxFit.cover
+              ),
             ),
             SizedBox(
-              height: 300,
+              height: 900,
             ),
           ],
         ),

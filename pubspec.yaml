@@ -51,10 +51,14 @@ dependencies:
 
 
 dev_dependencies:
+  flutter_launcher_icons: "^0.10.0"
   flutter_test:
     sdk: flutter
 
-
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/zerowaste.jpeg"
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
@@ -77,7 +81,7 @@ flutter:
       - home.jpeg
       - zerowaste.jpeg
       - logo1.jpeg
-      - Club1.jpeg
+      
       - Club2.jpeg
       - Club3.jpeg
       - ND.jpeg
@@ -97,6 +101,47 @@ flutter:
       - ND3.jpeg
       - ND4.jpeg
       - h11.jpg
+      - R1Reduce.jpg
+      - reduce2.jfif
+      - Reduce3.jfif
+      - Recycle3.jfif
+      - ReuseProjectdemo.jfif
+      - Rethink.jfif
+      - 6R.webp
+      - 6rs.jpg
+      - recycle1.jpg
+      - recycleS1.jfif
+      - recycleS2.jfif
+      - recycleS3.jfif
+      - Reduce_slider3.jpg
+      - Reduce_Slider1.jpg
+      - reduce_slider2.jfif
+      - Reduce_Slider4.jpg
+      - Reduce_Slider6.jpg
+      - Recycle_slider1.jpg
+      - Recycle_slider2.jpg
+      - Recycle_slider3.jpg
+      - reuse_main1.jpg
+      - Reuse_slider1.jpg
+      - Reuse.jpg
+      - Refuse_slider2.jpg
+      - Refuse_sliderhd2.jpg
+      - refuse_sliderhd3.png
+      - Recyclehome.jfif
+      - Recyclehome1.jpg
+      - reusehome.avif
+      - reuseplastichome1.jpg
+      - plasticworldhome1.jpg
+      - repairhome1.jpg
+      - rethinkhome1.jpg
+      - sixhome.jfif
+      - 6r22.jpg
+      - rethinkslider.jpg
+      - Rethinkslider2.jpg
+      - eventsmain.jpg
+      - Story1.jpg
+      - Story2.jpg
+
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

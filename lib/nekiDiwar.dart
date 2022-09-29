@@ -33,16 +33,16 @@ class _NekiDiwarState extends State<NekiDiwar> {
     return Container(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.green,
+          backgroundColor: Colors.white,
           title: Container(
             //padding: EdgeInsets.only(top: statusbarHeight),
 
             child: Center(
               child: Text(
-                "Zero Waste",
+                "Donate",
                 style: TextStyle(
                     fontSize: 20.0,
-                    color: Colors.red,
+                    color: Colors.black,
                     fontWeight: FontWeight.bold),
               ),
             ),
@@ -61,7 +61,7 @@ class _NekiDiwarState extends State<NekiDiwar> {
             //height: double.infinity,
             decoration: BoxDecoration(
               gradient: LinearGradient(colors: [
-                Colors.green.withOpacity(.6),
+                Color.fromARGB(255, 114, 213, 117).withOpacity(.1),
                 Colors.white.withOpacity(.6),
               ]),
             ),
@@ -70,15 +70,21 @@ class _NekiDiwarState extends State<NekiDiwar> {
                 SizedBox(
                   height: 10,
                 ),
-                Text(
-                    'There could be no definition to a successful life that does not include the the service to others. Invest yourself in the life of someone else today!!',
-                    style: TextStyle(fontSize: 15)),
+                Container(
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                      'There could be no definition to a successful life that does not include the the service to others. Invest yourself in the life of someone else today!!',
+                      style: TextStyle(fontSize: 15)),
+                ),
                 // SizedBox(
                 //   height: 10,
                 // ),
-                Text(
-                    'You can visit our place to donate or we provide the pick up services as well.Please select the type of donation in the field given below.',
-                    style: TextStyle(fontSize: 15)),
+                Container(
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                      'You can visit our place to donate or we provide the pick up services as well.Please select the type of donation in the field given below.',
+                      style: TextStyle(fontSize: 15)),
+                ),
                 SizedBox(
                   height: 30,
                 ),
@@ -124,145 +130,8 @@ class _NekiDiwarState extends State<NekiDiwar> {
                         ],
                       )),
                 ),
-                ////////////////////////////////////////////////////////// Form /////////////////////////////////////////
-                // Visibility(
-                //   visible: viewVisible,
-                //   child: Container(
-                //     padding: EdgeInsets.only(left: 10, right: 10),
-                //     child: Column(
-                //       children: [
-                //         TextField(
-                //           autofocus: true,
-                //           style: TextStyle(fontSize: 20),
-                //           decoration: InputDecoration(
-                //             border: OutlineInputBorder(
-                //                 borderRadius: BorderRadius.circular(20),
-                //                 borderSide: BorderSide(
-                //                     width: 3, color: Colors.green)),
-                //             labelText: 'Name',
-                //             hintText: 'Enter Name',
-                //             prefixIcon: Icon(Icons.people),
-                //           ),
-                //         ),
-                //         SizedBox(
-                //           height: 20,
-                //         ),
-                //         TextField(
-                //           style: TextStyle(fontSize: 20),
-                //           decoration: InputDecoration(
-                //             border: OutlineInputBorder(
-                //               borderRadius: BorderRadius.circular(20),
-                //             ),
-                //             labelText: 'Contact Number',
-                //             hintText: 'Enter Contact Number',
-                //             prefixIcon: Icon(Icons.phone),
-                //           ),
-                //         ),
-                //         SizedBox(
-                //           height: 20,
-                //         ),
-                //         TextField(
-                //           style: TextStyle(fontSize: 20),
-                //           decoration: InputDecoration(
-                //             border: OutlineInputBorder(
-                //               borderRadius: BorderRadius.circular(20),
-                //             ),
-                //             labelText: 'Address ',
-                //             hintText: 'Enter Street NumberS',
-                //             prefixIcon: Icon(Icons.location_on),
-                //           ),
-                //         ),
-                //         SizedBox(
-                //           height: 10,
-                //         ),
-                //         TextField(
-                //           style: TextStyle(fontSize: 20),
-                //           decoration: InputDecoration(
-                //             border: OutlineInputBorder(
-                //               borderRadius: BorderRadius.circular(20),
-                //             ),
-                //             labelText: 'Area',
-                //             hintText: 'Enter Area',
-                //           ),
-                //         ),
-                //         SizedBox(
-                //           height: 10,
-                //         ),
-                //         TextField(
-                //           style: TextStyle(fontSize: 20),
-                //           decoration: InputDecoration(
-                //             border: OutlineInputBorder(
-                //               borderRadius: BorderRadius.circular(20),
-                //             ),
-                //             labelText: 'Landmark',
-                //             hintText: 'Enter Landmark',
-                //           ),
-                //         ),
-                //         SizedBox(
-                //           height: 20,
-                //         ),
-                //         TextField(
-                //           style: TextStyle(fontSize: 20),
-                //           decoration: InputDecoration(
-                //             border: OutlineInputBorder(
-                //               borderSide: BorderSide(color: Colors.green),
-                //               borderRadius: BorderRadius.circular(20),
-                //             ),
-                //             labelText: 'PickUp Date',
-                //             hintText: 'Enter PickUp Date',
-                //             prefixIcon: Icon(Icons.calendar_view_month),
-                //           ),
-                //         ),
-                //         SizedBox(
-                //           height: 20,
-                //         ),
-                //         TextField(
-                //           style: TextStyle(fontSize: 20),
-                //           decoration: InputDecoration(
-                //             border: OutlineInputBorder(
-                //               borderRadius: BorderRadius.circular(20),
-                //             ),
-                //             labelText: 'PickUp Time',
-                //             hintText: 'Enter PickUp Time',
-                //             prefixIcon: Icon(Icons.time_to_leave),
-                //           ),
-                //         ),
-                //         SizedBox(
-                //           height: 20,
-                //         ),
-                //         TextField(
-                //           style: TextStyle(fontSize: 20),
-                //           decoration: InputDecoration(
-                //             border: OutlineInputBorder(
-                //               borderRadius: BorderRadius.circular(20),
-                //             ),
-                //             labelText: 'Donation Items',
-                //             hintText: 'Items you want to donate',
-                //             prefixIcon: Icon(Icons.hail),
-                //           ),
-                //         ),
-                //         SizedBox(
-                //           height: 10,
-                //         ),
-                //         ElevatedButton(
-                //             style: ElevatedButton.styleFrom(
-                //               primary: Colors.green,
-                //               // side: BorderSide(color: Colors.yellow, width: 5),
-                //               textStyle: const TextStyle(
-                //                   color: Colors.white,
-                //                   fontSize: 25,
-                //                   fontStyle: FontStyle.normal),
-                //               shape: BeveledRectangleBorder(
-                //                   borderRadius:
-                //                       BorderRadius.all(Radius.circular(10))),
-                //             ),
-                //             onPressed: submit,
-                //             child: Text('Submit')),
-                //       ],
-                //     ),
-                //   ),
-                // ),
-                SizedBox(height: 300),
+
+                SizedBox(height: 1000),
               ],
             ),
           ),
